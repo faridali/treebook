@@ -3,3 +3,9 @@ farid:
      last_name: "Ali"
      email: "f.ali20@gmail.com"
      profile_name: "farid"
+
+batman:
+     first_name: "Bat"
+     last_name: "Man"
+     email: "batman@example.com"
+     profile_name: "batmann"
