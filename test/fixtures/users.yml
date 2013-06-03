@@ -5,7 +5,7 @@ farid:
      profile_name: "farid"
 
 batman:
-     first_name: "Bat"
-     last_name: "Man"
+     first_name: "The"
+     last_name: "Batman"
      email: "batman@example.com"
      profile_name: "batmann"
