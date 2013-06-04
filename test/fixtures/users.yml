@@ -9,3 +9,9 @@ batman:
      last_name: "Batman"
      email: "batman@example.com"
      profile_name: "batmann"
+
+mike:
+     first_name: "Mike"
+     last_name: "The Frog"
+     email: "mike@teamtreehouse.com"
+     profile_name: "mikethefrog"
