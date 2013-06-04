@@ -17,6 +17,11 @@ end
 gem 'devise'
 gem 'simple_form'
 
+
+group :test do
+	gem 'shoulda'
+end
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
