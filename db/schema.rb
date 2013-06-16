@@ -11,7 +11,25 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130604152419) do
+ActiveRecord::Schema.define(:version => 20130616001231) do
+
+  create_table "cards", :force => true do |t|
+    t.string   "name"
+    t.integer  "status_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "cards", ["status_id"], :name => "index_cards_on_status_id"
+
+  create_table "slides", :force => true do |t|
+    t.text     "content"
+    t.integer  "status_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "slides", ["status_id"], :name => "index_slides_on_status_id"
 
   create_table "statuses", :force => true do |t|
     t.text     "content"

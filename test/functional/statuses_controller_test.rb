@@ -88,6 +88,8 @@ class StatusesControllerTest < ActionController::TestCase
     assert_equal assigns(:status).user_id, users(:farid).id
   end
 
+  test "should not "
+
   test "should destroy status" do
     assert_difference('Status.count', -1) do
       delete :destroy, id: @status
