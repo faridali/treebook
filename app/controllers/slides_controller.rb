@@ -12,9 +12,16 @@ class SlidesController < ApplicationController
     redirect_to status_path(@status)
   end
 
-    def edit
+  def edit
     @status = Status.find(params[:status_id])
     @slide = @status.slides.find(params[:id])
+  end
+
+def update
+    @status = Status.find(params[:status_id])
+    @slide = @status.slides.find(params[:id])
+    @slide.update_attributes(params[:slide])
+    redirect_to @status
   end
 
 end

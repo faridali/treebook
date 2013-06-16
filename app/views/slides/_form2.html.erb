@@ -1,9 +1,11 @@
-<%= form_for([@status, @status.slides.build]) do |f| %>
+<h4>Edit slide:</h4>
+
+<%= form_for([@status,@slide],:url=>status_slide_path, :method => :put) do |f| %>
   <div class="field">
-  	<p>test</p>
     <%= f.text_area :content %>
   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
- <% end %>
+<% end %>
+
