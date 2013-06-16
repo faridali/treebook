@@ -4,24 +4,19 @@
   <b>Author:</b>
   <%= @status.user.full_name %>
 </p>
-
+<h2>Title Slide</h2>
 <p>
   <%= @status.content %>
 </p>
+
+<%= link_to 'Edit', edit_status_path(@status) %> |
+<%= link_to 'Back', statuses_path %>
 
 <p>
 	<%= render @status.slides %>
 </p>
 
-<p>
-  <b>Cards:</b>
-  <%= @status.cards.map { |t| t.name }.join(", ") %>
-</p>
-
-<h2>Add a slide:</h2>
+<h5>Add a slide:</h5>
 <%= render "slides/form" %>
 
 
-
-<%= link_to 'Edit', edit_status_path(@status) %> |
-<%= link_to 'Back', statuses_path %>

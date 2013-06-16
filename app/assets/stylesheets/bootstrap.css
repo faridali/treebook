@@ -1110,7 +1110,8 @@ textarea,
 }
 
 textarea {
-  height: auto;
+height: 100px;
+width: 300px;
 }
 
 textarea,

@@ -2,5 +2,12 @@
 
 <%= render 'form' %>
 
+<p>
+	<%= render @status.slides %>
+</p>
+
+<h5>Add a slide:</h5>
+<%= render "slides/form" %>
+
 <%= link_to 'Show', @status %> |
 <%= link_to 'Back', statuses_path %>

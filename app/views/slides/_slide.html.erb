@@ -1,0 +1,11 @@
+ <p>
+  <%= slide.content %>
+</p>
+
+<p>
+  <%= link_to 'Edit', edit_status_slide_path(@status,slide) %> |
+  <%= link_to 'Delete', [slide.status, slide],
+               :confirm => 'Are you sure?',
+               :method => :delete %>
+
+</p>

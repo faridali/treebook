@@ -1,4 +1,3 @@
-<% @status.cards.build %>
 <%= simple_form_for(@status, html: {class: "form-horizontal"}) do |f| %>
   <% if @status.errors.any? %>
     <div id="error_explanation">
@@ -15,9 +14,6 @@
   
   <%= f.input :content %>
 
-<h2>Cards</h2>
-  <%= render :partial => 'cards/form',
-             :locals => {:form => f} %>
 
 <!-- test begin -->
 
