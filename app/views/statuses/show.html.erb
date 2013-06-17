@@ -17,7 +17,8 @@
 	<%= render @status.slides %>
 </p>
 
-<h5>Add a slide:</h5>
-<%= render "slides/form" %>
+<a id="form"></a>
 
-
+<p>
+<%= render "slides/form" if current_user.statuses.include?(@status) %>
+</p>
