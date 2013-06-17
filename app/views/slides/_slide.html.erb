@@ -3,9 +3,9 @@
 </p>
 
 <p>
-  <%= link_to 'Edit', edit_status_slide_path(@status,slide) %> |
+  <%= link_to 'Edit', edit_status_slide_path(@status,slide) if current_user.statuses.include?(@status) %> 
   <%= link_to 'Delete', [slide.status, slide],
                :confirm => 'Are you sure?',
-               :method => :delete %>
+               :method => :delete if current_user.statuses.include?(@status) %>
 
 </p>

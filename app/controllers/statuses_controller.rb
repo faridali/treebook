@@ -36,6 +36,7 @@ before_filter :authenticate_user!, only: [:new, :create, :edit, :update]
 
   # GET /statuses/1/edit
   def edit
+    @status = current_user.statuses.find(params[:id])
     @status = Status.find(params[:id])
   end
 
@@ -76,6 +77,7 @@ before_filter :authenticate_user!, only: [:new, :create, :edit, :update]
   # DELETE /statuses/1
   # DELETE /statuses/1.json
   def destroy
+    @status = current_user.statuses.find(params[:id])
     @status = Status.find(params[:id])
     @status.destroy
 

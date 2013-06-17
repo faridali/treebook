@@ -9,8 +9,9 @@
   <%= @status.content %>
 </p>
 
-<%= link_to 'Edit', edit_status_path(@status) %> |
-<%= link_to 'Back', statuses_path %>
+
+<%= link_to 'Edit', edit_status_path(@status) if current_user.statuses.include?(@status) %>
+<%= link_to "Delete", status_path(@status), method: :delete, data: { confirm: "Are you sure you want to delete this status?"} if current_user.statuses.include?(@status) %>
 
 <p>
 	<%= render @status.slides %>

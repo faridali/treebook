@@ -1,4 +1,6 @@
 class SlidesController < ApplicationController
+before_filter :authenticate_user!
+
 	  def create
     @status = Status.find(params[:status_id])
     @slide = @status.slides.create(params[:slide])
