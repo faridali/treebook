@@ -40,7 +40,7 @@ def update
     @status = Status.find(params[:status_id])
     @slide = @status.slides.find(params[:id])
     @slide.update_attributes(params[:slide])
-    redirect_to @status
+    redirect_to (status_path(@status, :anchor => "slide_#{(@slide.id)}"))
   end
 
 end

@@ -1,6 +1,8 @@
+ <div id="slide_<%= slide.id %>">
  <p>
   <%= slide.content %>
 </p>
+</div>
 
 <p>
   <%= link_to 'Edit', edit_status_slide_path(@status,slide) if current_user.statuses.include?(@status) %> 
