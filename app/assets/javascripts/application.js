@@ -13,3 +13,15 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+function updateCountdown() {
+    // 200 is the max message length
+    var remaining = 200 - jQuery('#slide_content').val().length;
+    jQuery('.countdown').text(remaining + ' characters remaining');
+}
+
+jQuery(document).ready(function($) {
+    updateCountdown();
+    $('#slide_content').change(updateCountdown);
+    $('#slide_content').keyup(updateCountdown);
+});

@@ -1,8 +1,8 @@
 <%= form_for([@status, @status.slides.build]) do |f| %>
-  <div class="field">
-    <%= f.text_area :content %>
+  <div class="field" >
+    <%= f.text_area :content, maxlength: 200, placeholder: "New slide text..." %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Create Slide", class: "btn btn-info" %>
+    <span class="countdown"></span>
   </div>
  <% end %>

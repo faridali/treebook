@@ -19,3 +19,11 @@ body {
 .alert {
 	margin-top: 10px;
 }
+
+/* micropost jQuery countdown */
+
+.countdown {
+  display: inline;
+  padding-left: 30px;
+  color: rgb(167, 167, 167);
+}
